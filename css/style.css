@@ -1,0 +1,440 @@
+@import url('http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700');
+
+/* == BASIC TYPOGRAPHY == */
+body {
+	font-family: 'Droid Serif', Georgia, serif; font-weight:400;font-size:14px;line-height:24px; 
+	color: #20223c; background-color: #f7f6e6;
+	}
+h1,h2,h3,h4 {color: #373c62;}
+h1 {font-size:30px;line-height:36px;margin:0;}
+h2 {font-size:24px;line-height:30px;margin:18px 0 6px;}
+h3 {font-size:18px;line-height:24px;margin:18px 0 6px;}
+h4 {font-size:15px;line-height:18px;margin:18px 0 6px;}
+h5, h6 {
+	color:#781818;
+	font: 12px/12px'Droid Sans', 'HelveticaNeue', Arial, sans-serif;font-weight:700;text-transform:uppercase;
+	margin:14px 0 4px;
+}
+				 
+.item h3, .item h4 {color: #781818;}
+.item .meta {font-size:12px;text-transform:uppercase;font-family:'Droid Sans', 'HelveticaNeue', Arial, sans-serif;}
+
+dt {font-family:'Droid Sans', 'HelveticaNeue', Arial, sans-serif;font-weight:700;color: #781818;}
+dd {font-style:italic;}
+p {text-indent:0;margin:0 0 0px;}
+p+p {text-indent:24px;}
+blockquote p {
+    border-left: 1px dashed #DDCC77;
+    color: #DDCC77;
+    display: inline-block;
+    float: right;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 12px 18px;
+    padding-left: 14px;
+    text-indent: 0;
+    width: 35%;
+}
+/* == LISTS == */
+ul, ol {list-style-position:inside;padding-left:14px;}
+	ul li {margin-bottom:6px;}	
+ol {padding-left:14px;}
+	ol li {margin-bottom:6px;}		
+ul.no-bullet {list-style:none;margin-left:0;padding-left:0px;}
+/* nested lists styles*/
+	ol li {list-style-type: upper-alpha;}
+		ol ol li {list-style-type: upper-roman;}
+			ol ol ol li {list-style-type: lower-alpha;}	
+				ol ol ol ol li {list-style-type: lower-roman;}					
+/* == LINKS == */
+a {
+	-webkit-transition: color 0.3s ease-in-out 0s;
+	-moz-transition: color 0.3s ease-in-out 0s;
+	-o-transition: color 0.3s ease-in-out 0s;
+	-ms-transition: color 0.3s ease-in-out 0s;
+	transition: color 0.3s ease-in-out 0s;
+	outline:medium none;
+}
+a {color:#781818;}
+	a:hover {color:#373c62;}
+		.submenu a, #footer a {color: #777766;text-decoration:none;} /*submenu is above #primary-nav*/
+		.submenu a:hover, #footer a:hover  {color: #781818;}
+			
+		#primary-nav a {	
+			-webkit-transition: none;
+			-moz-transition:  none;
+			-o-transition:  none;
+			-ms-transition:  none;
+			transition: all  none;
+			outline:medium none;
+		}
+/*   GENERIC CLASSES FOR VISUAL EFFECTS  */	
+.inset {	/*apply this class to boxes that need an inner shadow such as audioplayer box on home page and playlist on theme page */
+	-moz-box-shadow: inset 0px 0px 10px rgba(223,202,117,0.50);
+	-webkit-box-shadow: inset 0px 0px 10px rgba(223,202,117,0.50);
+	box-shadow: inset 0px 0px 10px rgba(223,202,117,0.50);
+	border:1px solid #888877;
+}
+.texture {
+	background: url(../images/bg-insetbox.png);
+}
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+
+/*Support for full multi-stop gradients with IE9 (using SVG).
+Add a "gradient" class to all your elements that have a gradient, and add the following override to your HTML to complete the IE9 support:
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->*/
+
+.gradient { /*for the boxes at top of lesson plan and song pages*/
+	background: 		url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM5JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjczIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZmNhNzUiIHN0b3Atb3BhY2l0eT0iMC4zMiIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.73) 39%, rgba(223,202,117,0.32) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(39%,rgba(255,255,255,0.73)), color-stop(100%,rgba(223,202,117,0.32))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.73) 39%,rgba(223,202,117,0.32) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.73) 39%,rgba(223,202,117,0.32) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.73) 39%,rgba(223,202,117,0.32) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.73) 39%,rgba(223,202,117,0.32) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#52dfca75',GradientType=0 ); /* IE6-8 */
+	border-bottom:1px solid #e4dfca; margin-bottom:24px;
+	padding:12px;
+}
+.gradient2 { /*alternative gradient style for the boxes at top of lesson plan and song pages*/
+	background-image: linear-gradient(bottom, rgb(223,215,183) 3%, rgb(247,245,230) 47%, rgb(255,255,255) 86%);
+	background-image: -o-linear-gradient(bottom, rgb(223,215,183) 3%, rgb(247,245,230) 47%, rgb(255,255,255) 86%);
+	background-image: -moz-linear-gradient(bottom, rgb(223,215,183) 3%, rgb(247,245,230) 47%, rgb(255,255,255) 86%);
+	background-image: -webkit-linear-gradient(bottom, rgb(223,215,183) 3%, rgb(247,245,230) 47%, rgb(255,255,255) 86%);
+	background-image: -ms-linear-gradient(bottom, rgb(223,215,183) 3%, rgb(247,245,230) 47%, rgb(255,255,255) 86%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.03, rgb(223,215,183)),
+		color-stop(0.47, rgb(247,245,230)),
+		color-stop(0.86, rgb(255,255,255))
+	);
+	border-bottom:1px solid #e4dfca; margin-bottom:24px;
+	padding:12px;
+}
+img.shadow { /*apply this class to images that need an outer shadow and white border */
+	-webkit-box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    0px 2px 5px rgba(50, 50, 50, 0.3);
+	box-shadow:         0px 2px 5px rgba(50, 50, 50, 0.3);
+	padding:6px; border:1px solid #e4dfca; background: #fff;
+}
+
+.button { /*apply this class to buttons such as Learn More; it creates gradient background, borders, etc without need for images
+		and resizes the box to fit the text*/
+	color: #3d3d3d;
+	font: 11px 'Droid Sans', 'HelveticaNeue', Arial, sans-serif;
+	font-weight:700; text-align:center;
+	text-transform:uppercase;
+	text-shadow: rgba(255,255,255,0.4) 0 1px 0;
+	border-top: 1px solid #fefefe;
+	background: #d6ba65;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f5df87), to(#d6ba65));
+	background: -webkit-linear-gradient(top, #f5df87, #d6ba65);
+	background: -moz-linear-gradient(top, #f5df87, #d6ba65);
+	background: -ms-linear-gradient(top, #f5df87, #d6ba65);
+	background: -o-linear-gradient(top, #f5df87, #d6ba65);
+	padding: 6px 12px; margin:12px 0;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	border-radius: 14px;
+	-webkit-box-shadow: 0 1px 0 #cccaad;
+	-moz-box-shadow: 0 1px 0 #cccaad;
+	box-shadow: 0 1px 0 #cccaad;
+
+	vertical-align: middle;
+	display:inline-block;
+}
+	.button:hover {
+	   border-top-color: #d1a63a;
+	   background: #d1a63a;
+	   color: #3d3d3d;
+	}
+	.button:active {
+	   border-top-color: #471220;
+	   background: #471220;
+	}	
+.circle {
+	padding:6px; border:1px solid #e4dfca; background: #fff;
+	-webkit-border-radius: 50em; 
+	/* very large border radius forces a circle without having to calculate size of area but only works on smallish square images */
+	-moz-border-radius: 50em;
+	-o-border-radius: 50em;
+	-html-border-radius: 50em;
+	-ms-border-radius: 50em;
+	border-radius: 50em;		
+}
+
+/*  === UTILITY CLASSES == */
+img.alignleft {margin:12px 20px 12px 0px;}
+img.alignright {margin:12px 0 12px 20px;}
+.more {font:10px 'Droid Sans', 'HelveticaNeue', Arial, sans-serif;font-weight:700;color: #781818;text-transform:uppercase;}
+
+/*  === SEARCH FORM STYLES == */
+#search-wrap {margin:20px 0;}
+#search-form {
+	display: inline-block;
+	zoom: 1; /* ie7 hack for display:inline-block */
+	*display: inline;
+}
+#search-form input[type=text] {
+	width: 190px;
+	padding: 5px;
+	outline: none;
+	border: 1px solid #999999;
+		-webkit-border-radius: 18px;
+		-moz-border-radius: 18px;
+		-o-border-radius: 18px;
+		-html-border-radius: 18px;
+		-ms-border-radius: 18px;
+	border-radius: 18px;
+	background-color: #FBFBFB;
+	
+	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.2);
+	box-shadow: inset 0 3px 8px rgba(0,0,0,.2);
+	
+	font: 14px 'Droid Sans', Arial, sans-serif;
+	background: transparent url('../images/search.png') 10px 5px no-repeat;
+	-webkit-transition: background-color .2s ease-in,
+	                    background-position .2s ease-in,
+	                    box-shadow .3s ease-in;
+	-moz-transition: 	background-color .2s ease-in,
+	                 	background-position .2s ease-in,
+	                 	box-shadow .3s ease-in; 
+	-o-transition: 		background-color .2s ease-in,
+	               		background-position .2s ease-in,
+	               		box-shadow .3s ease-in; 
+	-ms-transition: 	background-color .2s ease-in,
+	                	background-position .2s ease-in,
+	                	box-shadow .3s ease-in; 
+	transition: 		background-color .2s ease-in,
+	            		background-position .2s ease-in,
+	            		box-shadow .3s ease-in;
+}
+#search-form input[type=button] {
+    color: #dfca75;
+    border: solid 1px #2b2e51;
+    font-size: 11px;
+    height: 27px;
+    width: 27px;
+	margin-left:3px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.6);
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+
+    background: #20223c;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2e3566), to(#20223c));
+    background: -moz-linear-gradient(top,  #2e3566,  #20223c);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e3566', endColorstr='#20223c'); /* ie7 */
+    -ms-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e3566', endColorstr='#20223c'); /* ie8 */
+}
+
+
+/* == LAYOUT == */
+#header {background: #e4dfca url(../images/bg-header.png) top repeat-x;}
+    #header-wrap {min-height:245px;background:url(../images/bg-header-wrap.png) bottom no-repeat;overflow:hidden}
+    
+
+    
+#site-title {clear:both;float:left}
+    #site-title h1 {margin-top:5px}
+    #site-title h1 a{display:block;height:80px;width:456px;background: url(../images/ihas-logo.png); text-indent:-9999px}
+
+    /* = HOMEPAGE = */
+    #home #header {background: #e4dfca url(../images/bg-home-header.png) top repeat-x;}
+        #home #header-wrap {min-height:0;background:none}
+    
+    #featured {clear:both;background: url(../images/bg-home-featured.png) bottom repeat-x;overflow:hidden }
+    #home #featured-wrap {background: url(../images/bg-home-content-wrap.png) bottom no-repeat;overflow:hidden}
+    
+    #home #content {}
+    #home #content-wrap {}
+    
+    #home-tabbed-wrap {margin-top:-30px}
+        #home-tabbed-wrap p {clear:both}
+        
+#slideshow {clear:both; float:right;margin:30px 0 40px}
+
+
+#song-page-additional {clear:both;}
+
+/*  === PRIMARY NAVIGATION == */
+#primarynav-wrap {
+    clear:right;
+    float:right;
+	position:relative;
+	background-color: #373c62; 
+	padding: 10px;
+ 	-webkit-border-radius: 38px;
+	-moz-border-radius: 38px;
+	-o-border-radius: 38px;
+	-html-border-radius: 38px;
+	-ms-border-radius: 38px;*/
+	border-radius: 38px;
+
+	width:382px; height:38px;	
+	margin:15px 0 0;
+}
+
+ul#primary-nav {
+	background: transparent url(../images/navsprite.png) 18px top no-repeat;
+	list-style:none;	
+	width:382px;height:38px;
+	padding-left:0;
+}
+	#primary-nav li {
+		position:absolute;margin-bottom:0;height:38px;
+	}
+	#primary-nav a {
+		background: transparent url(../images/navsprite.png) top left no-repeat;
+		display:block;
+		height: 38px;
+		text-indent:-9999em; 
+	}
+	ul#primary-nav li.nav-themes {left:18px;}
+		ul#primary-nav li.nav-themes.current {padding-top:6px; top:-12px;}
+		ul#primary-nav li.nav-themes a {width:65px;background-position:0px 0px;}
+			ul#primary-nav li.nav-themes a:hover {margin-top:-18px;padding-top:6px;}
+			ul#primary-nav li.nav-themes.current a:hover {margin-top:0px;}
+			ul#primary-nav li.nav-themes a:hover,
+			ul#primary-nav li.nav-themes a:active, 
+			ul#primary-nav li.nav-themes.current a {
+				background-position:0px -39px; height:43px;
+				}
+	ul#primary-nav li.nav-eras {left:96px;}
+		ul#primary-nav li.nav-eras.current {padding-top:6px; top:-12px;}
+		ul#primary-nav li.nav-eras a {width:60px;background-position:-72px 0px;}
+			ul#primary-nav li.nav-eras a:hover {margin-top:-18px;padding-top:6px;}
+			ul#primary-nav li.nav-eras.current a:hover {margin-top:0px;}
+			ul#primary-nav li.nav-eras a:hover,
+			ul#primary-nav li.nav-eras a:active, 
+			ul#primary-nav li.nav-eras.current a {
+				background-position:-72px -39px; height:43px;
+				}				
+	ul#primary-nav li.nav-styles {left:166px;}
+		ul#primary-nav li.nav-styles.current {padding-top:6px; top:-12px;}
+		ul#primary-nav li.nav-styles a {width:75px;background-position:-141px 0px;}
+			ul#primary-nav li.nav-styles a:hover {margin-top:-18px;padding-top:6px;} 
+			ul#primary-nav li.nav-styles.current a:hover {margin-top:0px;}
+			ul#primary-nav li.nav-styles a:hover,
+			ul#primary-nav li.nav-styles a:active, 
+			ul#primary-nav li.nav-styles.current a {
+				background-position:-141px -39px; height:43px;
+				}
+	ul#primary-nav li.nav-teacher-resources {left:236px;}
+		ul#primary-nav li.nav-teacher-resources.current {padding-top:6px; top:-12px;}
+		ul#primary-nav li.nav-teacher-resources a {width:148px;background-position:-206px 0px;}
+			ul#primary-nav li.nav-teacher-resources a:hover {margin-top:-18px;padding-top:6px;}
+			ul#primary-nav li.nav-teacher-resources.current a:hover {margin-top:0px;} 
+			ul#primary-nav li.nav-teacher-resources a:hover,
+			ul#primary-nav li.nav-teacher-resources a:active, 
+			ul#primary-nav li.nav-teacher-resources.current a {
+				background-position:-206px -39px; height:43px;
+				}				
+			ul#primary-nav li.nav-themes.current a:hover, 
+			ul#primary-nav li.nav-styles.current a:hover, 
+			ul#primary-nav li.nav-eras.current a:hover,
+			ul#primary-nav li.nav-teacher-resources.current a:hover{
+				margin-top:0px; 
+				}			
+	ul#primary-nav li.current a {height:40px;top:6px;position:absolute;}
+	
+/*  === SECONDARY NAVIGATION == */	
+	.submenu {height:42px;float:right;font:12px 'Droid Sans', 'HelveticaNeue', Arial, sans-serif; text-transform:uppercase;letter-spacing:1px;}
+		/* submenu is in header, above primary-nav */
+		.submenu span {padding:28px 12px;}
+			.submenu span.sub2 {background:#d3cebc;}
+			
+/*  === HOME TOPIC SELECTION === */
+#top-selection-list li {width:180px;float:left;margin-right:40px;}
+    #top-selection-list li a {height:48px;display:block;text-indent:-9999em;}
+    
+#top-selection-list li#themes a {background: transparent url(../images/sprite-themestab.png) top left no-repeat;}
+
+#top-selection-list li#eras a {background: transparent url(../images/sprite-erastab.png) top left no-repeat;}
+
+#top-selection-list li#styles a {background: transparent url(../images/sprite-stylestab.png) top left no-repeat;}
+
+#top-selection-list li#themes a:hover, #top-selection-list li#eras a:hover, #top-selection-list li#styles a:hover, #top-selection-list li.ui-state-active#themes a, #top-selection-list li.ui-state-active#eras a, #top-selection-list li.ui-state-active#styles a {
+    background-position:0 -48px;
+    height:56px;
+    margin-top:-9px;
+}
+
+				
+/*  === SECTION NAVIGATION == */
+	#secnav h5 {color: #373c62;}
+	#secnav {text-align:right;}
+		#secnav ul li {
+			font:10px/24px 'Droid Sans', 'HelveticaNeue', Arial, sans-serif;font-weight:700;color: #781818;text-transform:uppercase;
+			list-style:none;
+			}
+		#secnav a {text-decoration:none;}
+		#secnav a:hover {text-decoration:underline;}
+		#secnav a.current {font-style:italic; padding-left:18px;background: url(../images/bullet-yellow.png) no-repeat 0 2px;}
+
+/* === HOME PAGE  === */
+#select p {font:18px/24px 'Droid Sans', 'HelveticaNeue', Arial, sans-serif;color: #373c62;
+	text-transform:uppercase; text-align:center;
+	margin-bottom:18px;
+}
+	#select p:before, #select p:after {content: "\25BC";display:inline;}
+	#select p:before {padding-right:6px;}
+	#select p:after {padding-left:6px;}
+	
+#home-tabbed-wrap p a {display:inline-block;height:175px;}
+	a#family {width: 188px;background:url(../images/home/themes/family-sprite.png) 0 0 no-repeat;}
+	a#work {width: 188px;background:url(../images/home/themes/work-sprite.png) 0 0 no-repeat;}
+	a#freedom {width: 188px;background:url(../images/home/themes/freedom-sprite.png) 0 0 no-repeat;}
+	a#faith {width: 188px;background:url(../images/home/themes/faith-sprite.png) 0 0 no-repeat;}
+	a#explore {width: 188px;background:url(../images/home/themes/explore-sprite.png) 0 0 no-repeat;}
+	a#family:hover, a#work:hover, a#freedom:hover, a#faith:hover, a#explore:hover {background-position:0 -179px;}
+	
+/*  === SONGLIST DEFINITION LISTS == */
+#songlist img {border:none;box-shadow:none;}
+#songlist dl:after { /* for browsers that support :after */
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+* html #songlist dl { height: 1% } /* for IE5+6 */
+*:first-child+html #songlist dl { min-height: 1px; } /* for IE7 */
+	dt {
+		font-weight: bold;
+	}
+		dd {
+			background:none no-repeat left top;
+			padding-left: 80px; /*allows space for the 60px square thumb plus 20px gutter as in 960 grid */
+		}
+			dd.thumb {
+				background-image: url(../images/60px-thumb.gif);
+			} /* placeholder image for song thumb from database*/	
+
+/* Slideshow */
+/*#slideshow {position:absolute; top:145px;left:428px;height:332px}
+#slideshow img {position:absolute; display:none; width:472px;height:304px;border:0;}
+#slideshow img.active {display:block;}*/
+/* KEN this probably needs to be modified depending on how you lay out and markup index.php*/
+.slides_container {
+                width:472px;
+                height:332px;
+            }
+            .slides_container div {
+                width:472px;
+                height:332px;
+                display:block;
+            }
