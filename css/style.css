@@ -245,6 +245,8 @@ img.alignright {margin:12px 0 12px 20px;}
 /* == LAYOUT == */
 #header {background: #e4dfca url(../images/bg-header.png) top repeat-x;}
     #header-wrap {min-height:245px;background:url(../images/bg-header-wrap.png) bottom no-repeat;overflow:hidden}
+
+#footer {clear: both;}
     
 
     
@@ -265,10 +267,14 @@ img.alignright {margin:12px 0 12px 20px;}
     #home-tabbed-wrap {margin-top:-30px}
         #home-tabbed-wrap p {clear:both}
         
-#slideshow {clear:both; float:right;margin:30px 0 40px}
+#slideshow {margin:30px 0 40px}
 
 
 #song-page-additional {clear:both;}
+
+.lesson-plan-text {clear:both}
+
+#lesson-plan-nav {width:100%}
 
 /*  === PRIMARY NAVIGATION == */
 #primarynav-wrap {
@@ -358,7 +364,19 @@ ul#primary-nav {
 			.submenu span.sub2 {background:#d3cebc;}
 			
 /*  === HOME TOPIC SELECTION === */
-#top-selection-list li {width:180px;float:left;margin-right:40px;}
+#select p {font:18px/24px 'Droid Sans', 'HelveticaNeue', Arial, sans-serif;color: #373c62;
+	text-transform:uppercase; text-align:center;
+	margin-bottom:18px;
+}
+	#select p:before, #select p:after {content: "\25BC";display:inline;}
+	#select p:before {padding-right:6px;}
+	#select p:after {padding-left:6px;}
+
+#select {width: 100%; overflow: hidden; padding-bottom:20px}
+
+#top-selection-list {position: relative; float: left; display: block; left: 50%;}
+
+#top-selection-list li {width:180px; margin-right:20px; position: relative; float: left; display: block; right: 50%;}
     #top-selection-list li a {height:48px;display:block;text-indent:-9999em;}
     
 #top-selection-list li#themes a {background: transparent url(../images/sprite-themestab.png) top left no-repeat;}
@@ -386,13 +404,7 @@ ul#primary-nav {
 		#secnav a.current {font-style:italic; padding-left:18px;background: url(../images/bullet-yellow.png) no-repeat 0 2px;}
 
 /* === HOME PAGE  === */
-#select p {font:18px/24px 'Droid Sans', 'HelveticaNeue', Arial, sans-serif;color: #373c62;
-	text-transform:uppercase; text-align:center;
-	margin-bottom:18px;
-}
-	#select p:before, #select p:after {content: "\25BC";display:inline;}
-	#select p:before {padding-right:6px;}
-	#select p:after {padding-left:6px;}
+
 	
 #home-tabbed-wrap p a {display:inline-block;height:175px;}
 	a#family {width: 188px;background:url(../images/home/themes/family-sprite.png) 0 0 no-repeat;}
@@ -400,7 +412,16 @@ ul#primary-nav {
 	a#freedom {width: 188px;background:url(../images/home/themes/freedom-sprite.png) 0 0 no-repeat;}
 	a#faith {width: 188px;background:url(../images/home/themes/faith-sprite.png) 0 0 no-repeat;}
 	a#explore {width: 188px;background:url(../images/home/themes/explore-sprite.png) 0 0 no-repeat;}
-	a#family:hover, a#work:hover, a#freedom:hover, a#faith:hover, a#explore:hover {background-position:0 -179px;}
+	a#early-america {width: 188px;background:url(../images/home/eras/early-america-sprite.png) 0 0 no-repeat;}
+	a#expansion {width: 188px;background:url(../images/home/eras/expansion-sprite.png) 0 0 no-repeat;}
+	a#civil-war {width: 188px;background:url(../images/home/eras/civilwar-sprite.png) 0 0 no-repeat;}
+	a#industry {width: 188px;background:url(../images/home/eras/industry-sprite.png) 0 0 no-repeat;}
+	a#post-war {width: 188px;background:url(../images/home/eras/postwar-sprite.png) 0 0 no-repeat;}
+	a#folk {width: 188px;background:url(../images/home/styles/folk-sprite.png) 0 0 no-repeat;}
+	a#art {width: 188px;background:url(../images/home/styles/art-sprite.png) 0 0 no-repeat;}
+	a#sacred {width: 188px;background:url(../images/home/styles/sacred-sprite.png) 0 0 no-repeat;}
+	a#popular {width: 188px;background:url(../images/home/styles/popular-sprite.png) 0 0 no-repeat;}
+	a#family:hover, a#work:hover, a#freedom:hover, a#faith:hover, a#explore:hover, a#early-america:hover, a#expansion:hover, a#civil-war:hover, a#family:hover, a#industry:hover, a#post-war:hover, a#folk:hover, a#art:hover, a#sacred:hover, a#popular:hover  {background-position:0 -179px;}
 	
 /*  === SONGLIST DEFINITION LISTS == */
 #songlist img {border:none;box-shadow:none;}

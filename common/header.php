@@ -15,13 +15,13 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css(array('reset', '960-12', 'style'));
+    queue_css(array('reset', '960-12', 'jquery-ui/jquery.ui.tabs', 'jplayer.blue.monday', 'style'));
     display_css();
     ?>
 
     <!-- JavaScripts -->
     <?php 
-    queue_js(array('slides.min.jquery', 'ihas-js'));
+    queue_js(array('slides.min.jquery','jquery.jplayer.min', 'ihas-js'));
     display_js(); 
     ?>
 
